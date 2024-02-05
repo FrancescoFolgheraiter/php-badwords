@@ -1,7 +1,3 @@
-<?php
-    $nome="ciao"
-?>
-
 <!--struttura sito-->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +11,7 @@
             Php Badwords
         </h1>
         <div>
-            <form action="">
+            <form action="./censored.php" method="GET">
                 <div>
                     <label for="paragraph">Paragrafo:</label>
                     <textarea name="paragraph" id="" cols="45" rows="10" placeholder="Inserisci un paragrafo"></textarea>
