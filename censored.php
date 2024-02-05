@@ -1,6 +1,7 @@
 <?php
-    $text = $_GET["paragraph"];
-    $word = $_GET["censuredWord"];
+    $text = trim($_GET["paragraph"]);
+    $word = trim($_GET["censuredWord"]);
+
 ?>
 <!--struttura sito-->
 <!DOCTYPE html>
@@ -11,9 +12,21 @@
         <title>php-badwords</title>
     </head>
     <body>
+        <h2>
+            Risultato
+        </h2>
+        <div>
         <?php
         echo $text;
-        echo $word;
+        echo "Lunghezza del paragrafo pari a :".strlen($text);
         ?>
+
+        </div>
+        <div>
+        <?php
+        echo str_replace($word, '***', $text);
+        echo "Lunghezza del paragrafo censurato con la parola: ".$word." è di: ".strlen(str_replace($word, '***', $text));
+        ?>
+        </div>
     </body>
 </html>
